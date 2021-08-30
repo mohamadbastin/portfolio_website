@@ -1,0 +1,15 @@
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/icudtl.dat
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/flutter_windows.dll
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/assets/animations/blue.flr
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/assets/animations/green.flr
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/assets/animations/grey.flr
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/assets/animations/red.flr
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/assets/animations/Update.flr
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/assets/animations/yellow.flr
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/NOTICES
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/Mohamad/Desktop/dev/portfolio_flutter/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
