@@ -69,7 +69,7 @@ class TopCard extends StatelessWidget {
         height: constraints.maxHeight * 0.89,
         width: constraints.maxWidth * 0.93,
         child: Opacity(
-          opacity: 0.7,
+          opacity: 1,
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
             child: Card(
