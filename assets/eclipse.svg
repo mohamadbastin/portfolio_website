@@ -1,1 +1,9 @@
-<svg fill="none" height="442" viewBox="0 0 218 442" width="218" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><radialGradient id="a" cx="0" cy="0" gradientTransform="matrix(355.4877256 424.93394008 -410.57726564 343.47733747 136.06 149.324)" gradientUnits="userSpaceOnUse" r="1"><stop offset="0" stop-color="#ffaea3"/><stop offset="1" stop-color="#59e1ff"/></radialGradient><circle cx="221" cy="221" fill="url(#a)" r="221"/></svg>
+<svg fill="none" height="442" viewBox="0 0 218 442" width="218"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <radialGradient id="a" cx="0" cy="0" gradientTransform="matrix(355.4877256 424.93394008 -410.57726564 343.47733747 136.06 149.324)" gradientUnits="userSpaceOnUse" r="1">
+        <stop offset="0" stop-color="#ffaea3"/>
+        <stop offset="1" stop-color="#59e1ff"/>
+    </radialGradient>
+    <circle cx="221" cy="221" fill="url(#a)" r="221"/>
+</svg>
