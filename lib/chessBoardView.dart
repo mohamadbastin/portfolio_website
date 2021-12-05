@@ -1,3 +1,4 @@
+// import 'package:flutter/material.dart';
 // class GridTableThingy extends StatefulWidget {
 //   const GridTableThingy(
 //       {Key? key,
@@ -152,35 +153,35 @@
 //   }
 // }
 
-// // const GridTableThingy(
-// //                 debug: true,
-// //                 rows: 7,
-// //                 columns: 12,
-// //                 children: [
-// //                   BubbleItem(
-// //                     row: 3,
-// //                     column: 1,
-// //                     child: SizedBox(
-// //                       // height: 20,
-// //                       child: Text(
-// //                         "mamad",
-// //                         style: TextStyle(color: Colors.white),
-// //                       ),
-// //                     ),
-// //                   ),
-// //                   BubbleItem(
-// //                     row: 2,
-// //                     column: 10,
-// //                     child: FlareItem(
-// //                         child: Icon(
-// //                       Icons.airplanemode_on,
-// //                       color: Colors.white,
-// //                     )),
-// //                   ),
-// //                   BubbleItem(
-// //                     row: 5,
-// //                     column: 0,
-// //                     child: FlareItem(child: Icon(Icons.media_bluetooth_on)),
-// //                   )
-// //                 ],
-// //               ),
+// const GridTableThingy(
+//                 debug: true,
+//                 rows: 7,
+//                 columns: 12,
+//                 children: [
+//                   BubbleItem(
+//                     row: 3,
+//                     column: 1,
+//                     child: SizedBox(
+//                       // height: 20,
+//                       child: Text(
+//                         "mamad",
+//                         style: TextStyle(color: Colors.white),
+//                       ),
+//                     ),
+//                   ),
+//                   BubbleItem(
+//                     row: 2,
+//                     column: 10,
+//                     child: FlareItem(
+//                         child: Icon(
+//                       Icons.airplanemode_on,
+//                       color: Colors.white,
+//                     )),
+//                   ),
+//                   BubbleItem(
+//                     row: 5,
+//                     column: 0,
+//                     child: FlareItem(child: Icon(Icons.media_bluetooth_on)),
+//                   )
+//                 ],
+//               ),
