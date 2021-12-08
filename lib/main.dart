@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'utils/get_data.dart';
 import 'widgets/top_card.dart';
 
 void main() {
@@ -34,21 +34,41 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          color: greyMain,
-          child: Stack(
-            // fit: StackFit.expand,
-            alignment: AlignmentDirectional.center,
-            children: [
-              Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: SvgPicture.asset("assets/eclipse.svg")),
-              const TopCard(),
-            ],
-          )),
-    );
+    return FutureBuilder(
+        future: GetData.getAboutPageData(),
+        builder: (buildContext, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Container(
+              color: greyMain,
+              child: const Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
+          } else if (snapshot.connectionState == ConnectionState.done) {
+            return Scaffold(
+              body: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  color: greyMain,
+                  child: Stack(
+                    // fit: StackFit.expand,
+                    alignment: AlignmentDirectional.center,
+                    children: [
+                      Align(
+                          alignment: AlignmentDirectional.centerEnd,
+                          child: SvgPicture.asset("assets/eclipse.svg")),
+                      const TopCard(),
+                    ],
+                  )),
+            );
+          } else {
+            return Container(
+              color: greyMain,
+              child: const Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
+          }
+        });
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/widgets/page1.dart';
+import 'package:portfolio_flutter/widgets/about_page.dart';
 import 'package:portfolio_flutter/widgets/page2.dart';
 import 'package:portfolio_flutter/widgets/page3.dart';
 import 'package:portfolio_flutter/widgets/tab_floater.dart';
@@ -19,9 +19,9 @@ class _DetailCardState extends State<DetailCard> {
   @override
   void initState() {
     super.initState();
-    pages = const [Page1(), Page2(), Page3()];
+    pages = const [AboutPage(), Page2(), Page3()];
     tabs = [
-      TabSection("INFO", () {
+      TabSection("ABOUT", () {
         setMyState(0);
       }),
       TabSection("PAGE2", () {
