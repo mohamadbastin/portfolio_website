@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: GetData.getAboutPageData(),
+        future: GetData.getAllData(),
         builder: (buildContext, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Container(

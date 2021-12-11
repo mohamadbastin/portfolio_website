@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:portfolio_flutter/utils/get_data.dart';
 
 import '../styles.dart';
 import 'contact_button.dart';
@@ -70,17 +71,14 @@ class IntroductionCard extends StatelessWidget {
                         child: Center(
                           child: AnimatedTextKit(
                             repeatForever: true,
-                            animatedTexts: [
-                              RotateAnimatedText('Flutter Developer',
-                                  rotateOut: false,
-                                  duration: const Duration(milliseconds: 600)),
-                              RotateAnimatedText('Backend Developer',
-                                  rotateOut: false,
-                                  duration: const Duration(milliseconds: 600)),
-                              RotateAnimatedText('Frontend Developer',
-                                  rotateOut: false,
-                                  duration: const Duration(milliseconds: 600)),
-                            ],
+                            animatedTexts: List.generate(
+                                GetData.introductionCardData.length,
+                                (index) => RotateAnimatedText(
+                                    GetData.introductionCardData[index]["title"]
+                                        .toString(),
+                                    rotateOut: false,
+                                    duration:
+                                        const Duration(milliseconds: 600))),
                           ),
                         ),
                       ),
