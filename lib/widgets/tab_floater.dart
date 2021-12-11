@@ -22,7 +22,7 @@ class _TabFloaterState extends State<TabFloater> {
           width: constraints.maxWidth * 0.729,
           height: constraints.maxWidth * 0.135,
           decoration: BoxDecoration(
-              color: const Color(0xff19181B).withOpacity(0.85),
+              color: const Color(0xff19181B).withOpacity(0.9),
               borderRadius: BorderRadius.circular(36)),
           child: ScrollConfiguration(
             behavior: ScrollConfiguration.of(context).copyWith(
