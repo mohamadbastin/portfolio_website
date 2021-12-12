@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../styles.dart';
 
@@ -19,10 +20,15 @@ class Tile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.network(
-          list[reverse ? list.length - index - 1 : index]['image'],
-          height: 48,
-        ),
+        list[reverse ? list.length - index - 1 : index]['image'] != null
+            ? Image.network(
+                list[reverse ? list.length - index - 1 : index]['image'],
+                height: 48,
+              )
+            : SvgPicture.asset(
+                'building.svg',
+                height: 48,
+              ),
         const SizedBox(
           width: 10,
         ),
