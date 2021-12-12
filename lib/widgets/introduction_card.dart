@@ -78,7 +78,7 @@ class IntroductionCard extends StatelessWidget {
                                         .toString(),
                                     rotateOut: false,
                                     duration:
-                                        const Duration(milliseconds: 600))),
+                                        const Duration(milliseconds: 800))),
                           ),
                         ),
                       ),

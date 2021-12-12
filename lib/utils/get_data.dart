@@ -22,7 +22,7 @@ class GetData {
   static Future<void> getTitleData() async {
     await http.get(Uri.parse(baseRoute + "/title/")).then((value) {
       introductionCardData = jsonDecode(value.body);
-      print(introductionCardData);
+      // print(introductionCardData);
     }).catchError((e) {
       log(e);
     });
