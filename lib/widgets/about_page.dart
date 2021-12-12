@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio_flutter/styles.dart';
 import 'package:portfolio_flutter/utils/get_data.dart';
+import 'package:portfolio_flutter/widgets/tile.dart';
 import 'package:portfolio_flutter/widgets/title_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -150,48 +151,10 @@ class AboutCard extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 28.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.network(
-                            GetData.aboutPageData!['education'][index]['image'],
-                            height: 48,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                GetData.aboutPageData!['education'][index]
-                                    ['title'],
-                                style:
-                                    roboto(fontSize: 20, color: Colors.white),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                  GetData.aboutPageData!['education'][index]
-                                      ['place'],
-                                  style: roboto(
-                                      fontSize: 18, color: Colors.white38)),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                  GetData.aboutPageData!['education'][index]
-                                          ['start_date'] +
-                                      " - " +
-                                      GetData.aboutPageData!['education'][index]
-                                          ['end_date'],
-                                  style: roboto(
-                                      fontSize: 18, color: Colors.white38))
-                            ],
-                          )
-                        ],
+                      child: Tile(
+                        list: GetData.aboutPageData!['education'],
+                        index: index,
+                        reverse: true,
                       ),
                     );
                   },
