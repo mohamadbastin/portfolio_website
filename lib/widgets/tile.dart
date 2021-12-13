@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../styles.dart';
 
@@ -21,15 +22,23 @@ class Tile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          list[reverse ? list.length - index - 1 : index]['image'] != null
-              ? Image.network(
-                  list[reverse ? list.length - index - 1 : index]['image'],
-                  height: 48,
-                )
-              : SvgPicture.asset(
-                  'building.svg',
-                  height: 48,
-                ),
+          InkWell(
+            onTap:
+                list[reverse ? list.length - index - 1 : index]['link'] != null
+                    ? () => launch(
+                        list[reverse ? list.length - index - 1 : index]['link'])
+                    : null,
+            child: list[reverse ? list.length - index - 1 : index]['image'] !=
+                    null
+                ? Image.network(
+                    list[reverse ? list.length - index - 1 : index]['image'],
+                    height: 48,
+                  )
+                : SvgPicture.asset(
+                    'building.svg',
+                    height: 48,
+                  ),
+          ),
           const SizedBox(
             width: 10,
           ),
