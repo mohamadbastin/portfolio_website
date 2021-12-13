@@ -16,61 +16,86 @@ class Tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        list[reverse ? list.length - index - 1 : index]['image'] != null
-            ? Image.network(
-                list[reverse ? list.length - index - 1 : index]['image'],
-                height: 48,
-              )
-            : SvgPicture.asset(
-                'building.svg',
-                height: 48,
-              ),
-        const SizedBox(
-          width: 10,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              list[reverse ? list.length - index - 1 : index]['title'],
-              style: roboto(fontSize: 20, color: Colors.white),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            Text(list[reverse ? list.length - index - 1 : index]['place'],
-                style: roboto(fontSize: 18, color: Colors.white38)),
-            const SizedBox(
-              height: 8,
-            ),
-            Text(
-                list[reverse ? list.length - index - 1 : index]['start_date'] +
-                    " - " +
-                    list[reverse ? list.length - index - 1 : index]['end_date'],
-                style: roboto(fontSize: 18, color: Colors.white38)),
-            list[reverse ? list.length - index - 1 : index]['description'] !=
-                    null
-                ? const SizedBox(
-                    height: 12,
-                  )
-                : Container(),
-            list[reverse ? list.length - index - 1 : index]['description'] !=
-                    null
-                ? Padding(
-                    padding: const EdgeInsets.only(left: 18.0),
-                    child: Text(
+    return LayoutBuilder(builder: (context, constraints) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          list[reverse ? list.length - index - 1 : index]['image'] != null
+              ? Image.network(
+                  list[reverse ? list.length - index - 1 : index]['image'],
+                  height: 48,
+                )
+              : SvgPicture.asset(
+                  'building.svg',
+                  height: 48,
+                ),
+          const SizedBox(
+            width: 10,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: constraints.maxWidth * 0.8,
+                child: Row(
+                  children: [
+                    Flexible(
+                      child: Text(
                         list[reverse ? list.length - index - 1 : index]
-                            ['description'],
-                        style: roboto(fontSize: 18, color: Colors.white54)),
-                  )
-                : Container()
-          ],
-        )
-      ],
-    );
+                            ['title'],
+                        style: roboto(fontSize: 20, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              Text(list[reverse ? list.length - index - 1 : index]['place'],
+                  style: roboto(fontSize: 18, color: Colors.white38)),
+              const SizedBox(
+                height: 8,
+              ),
+              Text(
+                  list[reverse ? list.length - index - 1 : index]
+                          ['start_date'] +
+                      " - " +
+                      list[reverse ? list.length - index - 1 : index]
+                          ['end_date'],
+                  style: roboto(fontSize: 18, color: Colors.white38)),
+              list[reverse ? list.length - index - 1 : index]['description'] !=
+                      null
+                  ? const SizedBox(
+                      height: 12,
+                    )
+                  : Container(),
+              list[reverse ? list.length - index - 1 : index]['description'] !=
+                      null
+                  ? Padding(
+                      padding: const EdgeInsets.only(left: 18.0),
+                      child: SizedBox(
+                        width: constraints.maxWidth * 0.8,
+                        child: Row(
+                          children: [
+                            Flexible(
+                              child: Text(
+                                  list[reverse
+                                      ? list.length - index - 1
+                                      : index]['description'],
+                                  style: roboto(
+                                      fontSize: 18, color: Colors.white54)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
+                  : Container()
+            ],
+          )
+        ],
+      );
+    });
   }
 }
