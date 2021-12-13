@@ -30,24 +30,6 @@ class _DetailCardState extends State<DetailCard> {
       TabSection("PROJECTS", () {
         setMyState(2);
       }),
-      TabSection("PAGE1", () {
-        setMyState(0);
-      }),
-      TabSection("PAGE2", () {
-        setMyState(1);
-      }),
-      TabSection("PAGE3", () {
-        setMyState(2);
-      }),
-      TabSection("PAGE1", () {
-        setMyState(0);
-      }),
-      TabSection("PAGE2", () {
-        setMyState(1);
-      }),
-      TabSection("PAGE3", () {
-        setMyState(2);
-      })
     ];
   }
 

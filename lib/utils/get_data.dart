@@ -53,5 +53,6 @@ class GetData {
     await getTitleData();
     await getExperienceData();
     await getProjectData();
+    await Future.delayed(const Duration(seconds: 2));
   }
 }

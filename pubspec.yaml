@@ -36,6 +36,7 @@ dependencies:
   animated_text_kit: ^4.2.1
   http: ^0.13.4
   url_launcher: ^6.0.17
+  lottie: ^1.2.1
 
 
   # The following adds the Cupertino Icons font to your application.

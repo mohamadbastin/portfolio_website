@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/widgets/loading.dart';
 import 'styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'utils/get_data.dart';
@@ -40,9 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Container(
               color: greyMain,
-              child: const Center(
-                child: CircularProgressIndicator(),
-              ),
+              child: const CustomLoadingIndicator(),
             );
           } else if (snapshot.connectionState == ConnectionState.done) {
             return Scaffold(
