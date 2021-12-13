@@ -11,6 +11,7 @@ class GetData {
   static dynamic contactData;
   static dynamic experienceData;
   static dynamic volunteerData;
+  static dynamic projectData;
 
   static Future<void> getAboutPageData() async {
     await http
@@ -39,9 +40,18 @@ class GetData {
     });
   }
 
+  static Future<void> getProjectData() async {
+    await http.get(Uri.parse(baseRoute + "/project/")).then((value) {
+      projectData = jsonDecode(value.body)[0]["project"];
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
   static Future<void> getAllData() async {
     await getAboutPageData();
     await getTitleData();
     await getExperienceData();
+    await getProjectData();
   }
 }

@@ -15,7 +15,7 @@ class Tile extends StatelessWidget {
   final int index;
   final dynamic list;
   final bool reverse;
-  final bool? project;
+  final bool project;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class Tile extends StatelessWidget {
                     height: 48,
                   )
                 : SvgPicture.asset(
-                    project! ? 'light-bulb.svg' : 'building.svg',
+                    project ? 'light-bulb.svg' : 'building.svg',
                     height: 48,
                   ),
           ),
@@ -70,11 +70,14 @@ class Tile extends StatelessWidget {
                 height: 8,
               ),
               Text(
-                  list[reverse ? list.length - index - 1 : index]
-                          ['start_date'] +
-                      " - " +
-                      list[reverse ? list.length - index - 1 : index]
-                          ['end_date'],
+                  !project
+                      ? list[reverse ? list.length - index - 1 : index]
+                              ['start_date'] +
+                          " - " +
+                          list[reverse ? list.length - index - 1 : index]
+                              ['end_date']
+                      : list[reverse ? list.length - index - 1 : index]
+                          ['start_date'],
                   style: roboto(fontSize: 18, color: Colors.white38)),
               list[reverse ? list.length - index - 1 : index]['description'] !=
                       null

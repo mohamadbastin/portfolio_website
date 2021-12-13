@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/widgets/about_page.dart';
 import 'package:portfolio_flutter/widgets/experience_page.dart';
-import 'package:portfolio_flutter/widgets/page3.dart';
+import 'package:portfolio_flutter/widgets/project_page.dart';
 import 'package:portfolio_flutter/widgets/tab_floater.dart';
 
 class DetailCard extends StatefulWidget {
@@ -19,7 +19,7 @@ class _DetailCardState extends State<DetailCard> {
   @override
   void initState() {
     super.initState();
-    pages = const [AboutPage(), ExperiencePage(), Page3()];
+    pages = const [AboutPage(), ExperiencePage(), ProjectPage()];
     tabs = [
       TabSection("ABOUT", () {
         setMyState(0);
@@ -27,7 +27,7 @@ class _DetailCardState extends State<DetailCard> {
       TabSection("EXPERIENCE", () {
         setMyState(1);
       }),
-      TabSection("PAGE3", () {
+      TabSection("PROJECTS", () {
         setMyState(2);
       }),
       TabSection("PAGE1", () {
