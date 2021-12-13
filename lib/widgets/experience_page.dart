@@ -76,7 +76,9 @@ class ExperienceCard extends StatelessWidget {
                 const Divider(
                   color: Colors.white,
                 ),
-                const SizedBox(height: 28,),
+                const SizedBox(
+                  height: 28,
+                ),
                 ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
@@ -100,7 +102,9 @@ class ExperienceCard extends StatelessWidget {
                         ),
                       );
                     }),
-                    const SizedBox(height: 150,)
+                const SizedBox(
+                  height: 150,
+                )
               ],
             ),
           ),

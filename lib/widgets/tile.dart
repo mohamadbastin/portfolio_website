@@ -9,11 +9,13 @@ class Tile extends StatelessWidget {
       {Key? key,
       required this.index,
       required this.list,
-      required this.reverse})
+      required this.reverse,
+      this.project = false})
       : super(key: key);
   final int index;
   final dynamic list;
   final bool reverse;
+  final bool? project;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class Tile extends StatelessWidget {
                     height: 48,
                   )
                 : SvgPicture.asset(
-                    'building.svg',
+                    project! ? 'light-bulb.svg' : 'building.svg',
                     height: 48,
                   ),
           ),
@@ -100,7 +102,27 @@ class Tile extends StatelessWidget {
                         ),
                       ),
                     )
-                  : Container()
+                  : Container(),
+              list[reverse ? list.length - index - 1 : index]
+                          ['link_to_project'] !=
+                      null
+                  ? Padding(
+                      padding: const EdgeInsets.only(top: 12, left: 8),
+                      child: InkWell(
+                        onTap: () => launch(
+                            list[reverse ? list.length - index - 1 : index]
+                                ['link_to_project']),
+                        child: Text(
+                          list[reverse ? list.length - index - 1 : index]
+                              ['link_to_project_text'],
+                          style: roboto(fontSize: 18, color: Colors.white54),
+                        ),
+                      ),
+                    )
+                  : Container(),
+              const SizedBox(
+                height: 12,
+              )
             ],
           )
         ],
