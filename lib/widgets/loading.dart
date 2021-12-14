@@ -26,14 +26,15 @@ class _CustomLoadingIndicatorState extends State<CustomLoadingIndicator>
     //   setState(() {});
     // });
   }
-  final someColor =  const Color(0xff4a4a4a);
+
+  final someColor = const Color(0xff4a4a4a);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: greyMain,
       body: Center(
-        child: Lottie.asset('logo.json', width: 500, height: 500),
+        child: Lottie.asset('assets/logo.json', width: 500, height: 500),
       ),
     );
   }

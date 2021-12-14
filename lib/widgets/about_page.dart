@@ -106,7 +106,7 @@ class AboutCard extends StatelessWidget {
                   children: [
                     InkWell(
                       child: SvgPicture.asset(
-                        "linkedin.svg",
+                        "assets/linkedin.svg",
                         height: 48,
                       ),
                       onTap: () => launch(GetData.aboutPageData!['linkedin']),
@@ -116,7 +116,7 @@ class AboutCard extends StatelessWidget {
                     ),
                     InkWell(
                       child: SvgPicture.asset(
-                        "github.svg",
+                        "assets/github.svg",
                         height: 48,
                       ),
                       onTap: () => launch(GetData.aboutPageData!['github']),
@@ -126,7 +126,7 @@ class AboutCard extends StatelessWidget {
                     ),
                     InkWell(
                       child: SvgPicture.asset(
-                        "stack-overflow.svg",
+                        "assets/stack-overflow.svg",
                         height: 48,
                       ),
                       onTap: () =>

@@ -112,7 +112,7 @@ class Contact extends StatelessWidget {
                 children: [
                   InkWell(
                     child: SvgPicture.asset(
-                      "linkedin.svg",
+                      "assets/linkedin.svg",
                       height: 48,
                     ),
                     onTap: () => launch(GetData.aboutPageData!['linkedin']),
@@ -122,7 +122,7 @@ class Contact extends StatelessWidget {
                   ),
                   InkWell(
                     child: SvgPicture.asset(
-                      "github.svg",
+                      "assets/github.svg",
                       height: 48,
                     ),
                     onTap: () => launch(GetData.aboutPageData!['github']),
@@ -132,7 +132,7 @@ class Contact extends StatelessWidget {
                   ),
                   InkWell(
                     child: SvgPicture.asset(
-                      "stack-overflow.svg",
+                      "assets/stack-overflow.svg",
                       height: 48,
                     ),
                     onTap: () =>
@@ -143,7 +143,7 @@ class Contact extends StatelessWidget {
                   ),
                   InkWell(
                     child: SvgPicture.asset(
-                      'instagram.svg',
+                      'assets/instagram.svg',
                       height: 58,
                     ),
                     onTap: () => launch(GetData.aboutPageData!['instagram']),
@@ -155,7 +155,7 @@ class Contact extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 8.0),
                     child: InkWell(
                       child: SvgPicture.asset(
-                        'telegram.svg',
+                        'assets/telegram.svg',
                         height: 38,
                       ),
                       onTap: () => launch(GetData.aboutPageData!['telegram']),
@@ -168,7 +168,7 @@ class Contact extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 8.0, left: 10),
                     child: InkWell(
                       child: SvgPicture.asset(
-                        'whatsapp.svg',
+                        'assets/whatsapp.svg',
                         height: 38,
                       ),
                       onTap: () => launch(GetData.aboutPageData!['whatsapp']),

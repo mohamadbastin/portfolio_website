@@ -69,17 +69,18 @@ class IntroductionCard extends StatelessWidget {
                       child: SizedBox(
                         height: 150,
                         child: Center(
-                          child: AnimatedTextKit(
-                            repeatForever: true,
-                            animatedTexts: List.generate(
-                                GetData.introductionCardData.length,
-                                (index) => RotateAnimatedText(
-                                    GetData.introductionCardData[index]["title"]
-                                        .toString(),
-                                    rotateOut: false,
-                                    duration:
-                                        const Duration(milliseconds: 800))),
-                          ),
+                          child: Text(GetData.introductionCardData[0]["title"]),
+                          // child: AnimatedTextKit(
+                          //   // repeatForever: true,
+                          //   animatedTexts: List.generate(
+                          //       GetData.introductionCardData.length,
+                          //       (index) => RotateAnimatedText(
+                          //           GetData.introductionCardData[index]["title"]
+                          //               .toString(),
+                          //           rotateOut: false,
+                          //           duration:
+                          //               const Duration(milliseconds: 800))),
+                          // ),
                         ),
                       ),
                     ),

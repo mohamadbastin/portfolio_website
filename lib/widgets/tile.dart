@@ -37,7 +37,7 @@ class Tile extends StatelessWidget {
                     height: 48,
                   )
                 : SvgPicture.asset(
-                    project ? 'light-bulb.svg' : 'building.svg',
+                    project ? 'assets/light-bulb.svg' : 'assets/building.svg',
                     height: 48,
                   ),
           ),
