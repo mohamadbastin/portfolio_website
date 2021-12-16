@@ -52,7 +52,7 @@ class _DetailCardState extends State<DetailCard> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 34),
+              padding: const EdgeInsets.only(bottom: 24),
               child: TabFloater(
                 tabs: tabs,
               ),

@@ -20,7 +20,7 @@ class _TabFloaterState extends State<TabFloater> {
     return LayoutBuilder(builder: (context, constraints) {
       return Container(
           width: constraints.maxWidth * 0.729,
-          height: constraints.maxWidth * 0.135,
+          height: constraints.maxWidth * 0.075,
           decoration: BoxDecoration(
               color: const Color(0xff19181B).withOpacity(0.9),
               borderRadius: BorderRadius.circular(36)),
@@ -34,7 +34,6 @@ class _TabFloaterState extends State<TabFloater> {
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0, right: 8),
               child: ListView.builder(
-                  
                   scrollDirection: Axis.horizontal,
                   controller: _controller,
                   physics: const AlwaysScrollableScrollPhysics(),
